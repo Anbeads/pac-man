@@ -6,7 +6,6 @@ import { RainbowKitProvider, darkTheme, lightTheme } from "@rainbow-me/rainbowki
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import { useTheme } from "next-themes";
-import { Toaster } from "react-hot-toast";
 import { WagmiProvider } from "wagmi";
 import { Header } from "~~/components/Header";
 import { BlockieAvatar } from "~~/components/helper";
@@ -43,7 +42,6 @@ export const DappWrapperWithProviders = ({ children }: { children: React.ReactNo
               <InMemoryStorageProvider>{children}</InMemoryStorageProvider>
             </main>
           </div>
-          <Toaster />
         </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
